@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Andream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Andream">
+<meta property="og:url" content="http://andreamapp.com/index.html">
+<meta property="og:site_name" content="Andream">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Andream">
+  
+    <link rel="alternative" href="/atom.xml" title="Andream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  <style>
+	/* width */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #0005; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #ddd; 
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #f0f0f0; 
+	}
+  </style>
+</head>
+<body>
+  <div id="bg" class="bg"></div>
+  <div id="shade" class="shade"></div>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main">
+  
+    <article id="educational-Codeforces 1051" class="article article-type-educational" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/21/Codeforces 1051/">Codeforces 1051</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/09/21/Codeforces 1051/" class="article-date">
+  <time datetime="2018-09-20T16:35:24.000Z" itemprop="datePublished">2018-09-21</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rps</span><span class="params">(<span class="keyword">int</span> t1, <span class="keyword">int</span> t2)</span></span>&#123;</span><br><span class="line">	t1--; t2--;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); i++)&#123;</span><br><span class="line">		<span class="keyword">char</span> c = s[i];</span><br><span class="line">		<span class="keyword">if</span>(<span class="number">0</span> == t1 &amp;&amp; c &gt;= <span class="string">'a'</span> &amp;&amp; c &lt;= <span class="string">'z'</span>)&#123;</span><br><span class="line">			s[i] = <span class="number">1</span> == t2 ? <span class="string">'A'</span> : <span class="number">2</span> == t2 ? <span class="string">'0'</span> : s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">1</span> == t1 &amp;&amp; c &gt;= <span class="string">'A'</span> &amp;&amp; c &lt;= <span class="string">'Z'</span>)&#123;</span><br><span class="line">			s[i] = <span class="number">0</span> == t2 ? <span class="string">'a'</span> : <span class="number">2</span> == t2 ? <span class="string">'0'</span> : s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">2</span> == t1 &amp;&amp; c &gt;= <span class="string">'0'</span> &amp;&amp; c &lt;= <span class="string">'9'</span>)&#123;</span><br><span class="line">			s[i] = <span class="number">0</span> == t2 ? <span class="string">'a'</span> : <span class="number">1</span> == t2 ? <span class="string">'A'</span> : s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="keyword">int</span> c1 = <span class="number">0</span>, c2 = <span class="number">0</span>, c3 = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">		<span class="keyword">int</span> L = s.size();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(s[i] &gt;= <span class="string">'a'</span> &amp;&amp; s[i] &lt;= <span class="string">'z'</span>)&#123;</span><br><span class="line">				c1++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(s[i] &gt;= <span class="string">'A'</span> &amp;&amp; s[i] &lt;= <span class="string">'Z'</span>)&#123;</span><br><span class="line">				c2++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(s[i] &gt;= <span class="string">'0'</span> &amp;&amp; s[i] &lt;= <span class="string">'9'</span>)&#123;</span><br><span class="line">				c3++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(c1 &amp;&amp; c2 &amp;&amp; c3)&#123;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c1 &amp;&amp; c2)&#123;</span><br><span class="line">			<span class="keyword">if</span>(c2 &gt;= c1) rps(<span class="number">2</span>, <span class="number">3</span>); <span class="keyword">else</span> rps(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c1 &amp;&amp; c3)&#123;</span><br><span class="line">			<span class="keyword">if</span>(c3 &gt;= c1) rps(<span class="number">3</span>, <span class="number">2</span>); <span class="keyword">else</span> rps(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c2 &amp;&amp; c3)&#123;</span><br><span class="line">			<span class="keyword">if</span>(c2 &gt;= c3) rps(<span class="number">2</span>, <span class="number">1</span>); <span class="keyword">else</span> rps(<span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c1)&#123;</span><br><span class="line">			rps(<span class="number">1</span>, <span class="number">2</span>); rps(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c2)&#123;</span><br><span class="line">			rps(<span class="number">2</span>, <span class="number">1</span>); rps(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c3)&#123;</span><br><span class="line">			rps(<span class="number">3</span>, <span class="number">2</span>); rps(<span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> l, r;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; l &gt;&gt; r;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"YES\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i = l; i &lt;= r; i += <span class="number">2</span>)&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">" "</span> &lt;&lt; i+<span class="number">1</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> s[<span class="number">105</span>];</span><br><span class="line"><span class="keyword">int</span> stat[<span class="number">105</span>];</span><br><span class="line"><span class="keyword">bool</span> nice[<span class="number">105</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">		stat[s[i]]++;</span><br><span class="line">		nice[s[i]] = stat[s[i]] == <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> nicecnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(nice[i]) nicecnt++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> index_to_b = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(nicecnt % <span class="number">2</span> != <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(!nice[s[i]] &amp;&amp; stat[s[i]] &gt; <span class="number">2</span>)&#123;</span><br><span class="line">				index_to_b = i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(index_to_b == <span class="number">-1</span>)&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">int</span> index_nice = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i == index_to_b)&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">'B'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!nice[s[i]])&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">'A'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(nice[s[i]])&#123;</span><br><span class="line">			<span class="keyword">if</span>(index_nice &lt; nicecnt/<span class="number">2</span>)&#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">'B'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">'A'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			index_nice++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="D"><a href="#D" class="headerlink" title="D"></a>D</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, K;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">1005</span>][<span class="number">2018</span>][<span class="number">4</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; K;</span><br><span class="line"></span><br><span class="line">	dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>] = <span class="number">1</span>; dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	dp[<span class="number">1</span>][<span class="number">2</span>][<span class="number">2</span>] = <span class="number">1</span>; dp[<span class="number">1</span>][<span class="number">2</span>][<span class="number">3</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= K &amp;&amp; k &lt;= <span class="number">2</span>*i; k++)&#123;</span><br><span class="line">			dp[i][k][<span class="number">0</span>] = dp[i<span class="number">-1</span>][k][<span class="number">0</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">1</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">2</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">3</span>];</span><br><span class="line">			dp[i][k][<span class="number">1</span>] = dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] + dp[i<span class="number">-1</span>][k][<span class="number">1</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">2</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">3</span>];</span><br><span class="line">			dp[i][k][<span class="number">2</span>] = dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">1</span>] + dp[i<span class="number">-1</span>][k][<span class="number">2</span>];</span><br><span class="line">			dp[i][k][<span class="number">3</span>] = dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] + dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">1</span>] + dp[i<span class="number">-1</span>][k][<span class="number">3</span>];</span><br><span class="line">			<span class="keyword">if</span>(k &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">				dp[i][k][<span class="number">2</span>] += dp[i<span class="number">-1</span>][k<span class="number">-2</span>][<span class="number">3</span>];</span><br><span class="line">				dp[i][k][<span class="number">3</span>] += dp[i<span class="number">-1</span>][k<span class="number">-2</span>][<span class="number">2</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			dp[i][k][<span class="number">0</span>] %= mod; dp[i][k][<span class="number">1</span>] %= mod;</span><br><span class="line">			dp[i][k][<span class="number">2</span>] %= mod; dp[i][k][<span class="number">3</span>] %= mod;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)&#123;</span><br><span class="line">		res += dp[n][K][i];</span><br><span class="line">	&#125;</span><br><span class="line">	res %= mod;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; res;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-《UML精粹》读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/14/《UML精粹》读书笔记/">《UML精粹》读书笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/09/14/《UML精粹》读书笔记/" class="article-date">
+  <time datetime="2018-09-13T16:00:00.000Z" itemprop="datePublished">2018-09-14</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="UML使用方式"><a href="#UML使用方式" class="headerlink" title="UML使用方式"></a>UML使用方式</h2><blockquote>
+<p>UML在软件开发中作用的实质是人们不同的使用方式。</p>
+</blockquote>
+<p>作者在引言第一节就抛出了本书关键的一个问题：你想使用好UML吗？先问问自己你为什么要用UML，你期望用UML做什么？</p>
+<p>UML三种使用方法：</p>
+<ol>
+<li>草图 UML as sketch</li>
+<li>蓝图 UML as blueprint</li>
+<li>编程语言 UML as programing language</li>
+</ol>
+<p>草图的实质是选择，用于确定一个方案值不值得去做，而不关心具体怎么做。蓝图的实质是描述，并且尽可能精确细节的描述。草图是探究性的，蓝图是定义性的。</p>
+<p>用作编程语言指的是将UML直接编译为可执行的程序代码，这自然要求比蓝图更精确的描述能力。</p>
+<p>另一个看待UML的角度是：用UML对什么建模？</p>
+<ol>
+<li>软件视角：对软件建模，UML成分直接映射为软件成分</li>
+<li>概念视角：对概念建模，UML成分只是对概念的表述，至于软件怎么实现，另当别论</li>
+</ol>
+<p>UML到底用作什么，UML和设计的关系为何？引起很多争议。作者随后表明自己立场，也是我赞同的立场：<br><strong>UML用作草图，可用于软件视角和概念视角。不赞同用于蓝图和编程语言。</strong></p>
+<blockquote>
+<p>图示法的魅力在于直观，而不是形式定义。</p>
+</blockquote>
+<h2 id="什么才是合法的UML"><a href="#什么才是合法的UML" class="headerlink" title="什么才是合法的UML"></a>什么才是合法的UML</h2><p>UML具有指定性规则还是描述性规则？换句话说，UML标准是按照某个机构某个文档说的算，还是使用者说的算？这个问题乍一看有点傻，其实是因为UML标准繁杂不统一导致的。</p>
+<blockquote>
+<p>如果你是一名草图绘制人员或一名蓝图绘制人员，不必更多强调有合法的UML，更为重要的是，要对你的系统有一个好的设计。</p>
+</blockquote>
+<p><strong>把精力更多的用在如何设计一个好的系统，而非拘泥于标准。</strong></p>
+<p><strong>如果有非UML图更适合，feel free to use it.</strong></p>
+<h2 id="何处着手使用UML"><a href="#何处着手使用UML" class="headerlink" title="何处着手使用UML"></a>何处着手使用UML</h2><p><strong>从类图和顺序图着手了解UML，再根据需要去了解更高级的UML</strong></p>
+<blockquote>
+<p>没有人能了解UML的全部，你应该寻求为你和你的同事们的工作的UML子集。</p>
+</blockquote>
+<h2 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h2><p>UML模式及其应用，larman，Applying UML and Patterns<br>Rumbaugh，UML Reference<br>重构，Martin Fowler<br>设计模式</p>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>作者推崇的过程：</p>
+<p>迭代风格、阶段提交、时间框定、回归测试、重构、连续集成、响应变更、迭代回顾</p>
+<pre><code>敏捷过程
+    极限编程（XP）
+    Scrum
+    Crystal
+    DSDM
+Rational统一过程（RUP）
+</code></pre><h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><h1 id="顺序图"><a href="#顺序图" class="headerlink" title="顺序图"></a>顺序图</h1><h1 id="对象图"><a href="#对象图" class="headerlink" title="对象图"></a>对象图</h1><h1 id="包图"><a href="#包图" class="headerlink" title="包图"></a>包图</h1><h1 id="部署图"><a href="#部署图" class="headerlink" title="部署图"></a>部署图</h1><h1 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h1><h1 id="状态机图"><a href="#状态机图" class="headerlink" title="状态机图"></a>状态机图</h1><h1 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a>活动图</h1><h1 id="通信图"><a href="#通信图" class="headerlink" title="通信图"></a>通信图</h1><h1 id="构件图"><a href="#构件图" class="headerlink" title="构件图"></a>构件图</h1><h1 id="协作图"><a href="#协作图" class="headerlink" title="协作图"></a>协作图</h1>
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Vue入门" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/13/Vue入门/">Vue入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/09/13/Vue入门/" class="article-date">
+  <time datetime="2018-09-12T16:00:00.000Z" itemprop="datePublished">2018-09-13</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>有基础的HTML+CSS+JS知识就阔以搞起了</p>
+</blockquote>
+<h2 id="Hello-Vue-——-声明式渲染"><a href="#Hello-Vue-——-声明式渲染" class="headerlink" title="Hello Vue —— 声明式渲染"></a>Hello Vue —— 声明式渲染</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    Hello Vue, My name is xxx.</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+<p>这是一个最简单的网页了，略去了网页其他不必要的细节，我打算据此引入Vue的使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    Hello Vue, My name is &#123;&#123; name &#125;&#125;.</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script src="https:/</span><span class="regexp">/unpkg.com/</span>vue<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">    var obj = new Vue(&#123;</span></span><br><span class="line"><span class="string">        el: '#app',</span></span><br><span class="line"><span class="string">        data: &#123;</span></span><br><span class="line"><span class="string">            name: 'Biao'</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个代码很好懂，目的是用js动态填充<code>文档元素</code>里的模板。</p>
+<p>从面向对象的角度来理解Vue的工作原理，那么这段代码最关键的一个词就是：new。就好像一首诗的“诗眼”一样。</p>
+<p>通过new创建了一个Vue对象实例，而这个对象将<code>文档元素</code>和<code>数据</code>联系在了一起。注意，Vue并非是简单地“模板替换”，在console里输入obj.name=’Tony’，你会发现文档<code>响应式</code>的改变了，这意味着Vue对象<code>obj</code>维护着元素<code>#app</code>和其他Vue属性<code>data</code>之间的关系。</p>
+<p>再提一问：Vue为什么要这样维护？比用DOM维护有什么好处？答案是DOM将结点元素视为一个对象，而Vue将有结构的数据视为一个对象。用Vue修改name只需要obj.name=’Tony’即可，而用DOM要先document.getElementById(‘app’)再修改innerHTML。</p>
+<p>如果再深究一步：Vue怎样实现这样的维护？那所有的秘密都藏在<code>&lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</code>这一行里了，恐怕只有阅读了源码才能清楚。</p>
+<h2 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"seen"</span>&gt;</span>现在你看到我了<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span>&gt;</span></span><br><span class="line">      &#123;&#123; todo.text &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">var obj = new Vue(&#123;</span><br><span class="line">  el: '#app',</span><br><span class="line">  data: &#123;</span><br><span class="line">    seen: true,</span><br><span class="line">    todos: [</span><br><span class="line">      &#123; text: '学习 JavaScript' &#125;,</span><br><span class="line">      &#123; text: '学习 Vue' &#125;,</span><br><span class="line">      &#123; text: '整个牛项目' &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="速查手册"><a href="#速查手册" class="headerlink" title="速查手册"></a>速查手册</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">v-if=&quot;seen&quot;</span><br><span class="line">v-for=&quot;todo in todos&quot;</span><br><span class="line">v-on:click=&quot;reverseMessage&quot;    // 事件绑定</span><br><span class="line">v-model=&quot;message&quot;   // 表单数据绑定</span><br><span class="line">var obj = new Vue(&#123;</span><br><span class="line">    el: &apos;#app&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">        name: &apos;Biao&apos;,</span><br><span class="line">        seen: true,</span><br><span class="line">        todo: []</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        reverseMessage: function () &#123;</span><br><span class="line">            this.message = this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Vue基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/13/Vue基础/">Vue基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/09/13/Vue基础/" class="article-date">
+  <time datetime="2018-09-12T16:00:00.000Z" itemprop="datePublished">2018-09-13</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ViewModel 使用Vue实例联系起HTML元素(View)和data(Model)<br>响应式 当data变化后会立即同步变化View<br>组件 所有视图可以视为以Vue实例为根的组件树，可以嵌套层叠，通过CSS控制布局和样式。封装为组件可提高抽象层次，方便复用</p>
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; rawHtml &#125;&#125;</span><br><span class="line">&lt;span v-html=&quot;rawHtml&quot;&gt;&lt;/span&gt;</span><br><span class="line">v-bind:id=&quot;dynamicId&quot;</span><br><span class="line">v-bind:disabled=&quot;isButtonDisabled&quot;</span><br><span class="line">v-bind:id=&quot;&apos;list-&apos; + id&quot;</span><br><span class="line">v-if=&quot;seen&quot;</span><br><span class="line">v-on:click=&quot;doSomething&quot;</span><br><span class="line"></span><br><span class="line">v-bind:href=&quot;url&quot;  缩写为  :href=&quot;url&quot;</span><br><span class="line">v-on:click=&quot;doSomething&quot;  缩写为  @click=&quot;doSomething&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// &#123;&#123; message.split(&apos;&apos;).reverse().join(&apos;&apos;) &#125;&#125;</span><br><span class="line">&#123;&#123; reversedMessage &#125;&#125;</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">  el: &apos;#example&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: &apos;Hello&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    // 计算属性的 getter</span><br><span class="line">    reversedMessage: function () &#123;</span><br><span class="line">      // `this` 指向 vm 实例</span><br><span class="line">      return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>计算属性和函数区别：计算属性是基于它们的依赖进行缓存的。只在相关依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。</p>
+<p>计算属性setter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  fullName: &#123;</span><br><span class="line">    // getter</span><br><span class="line">    get: function () &#123;</span><br><span class="line">      return this.firstName + &apos; &apos; + this.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    // setter</span><br><span class="line">    set: function (newValue) &#123;</span><br><span class="line">      var names = newValue.split(&apos; &apos;)</span><br><span class="line">      this.firstName = names[0]</span><br><span class="line">      this.lastName = names[names.length - 1]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Class-与-Style"><a href="#Class-与-Style" class="headerlink" title="Class 与 Style"></a>Class 与 Style</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;static&quot;</span><br><span class="line">     v-bind:class=&quot;&#123; active: isActive, &apos;text-danger&apos;: hasError &#125;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">和如下 data：</span><br><span class="line"></span><br><span class="line">data: &#123;</span><br><span class="line">  isActive: true,</span><br><span class="line">  hasError: false</span><br><span class="line">&#125;</span><br><span class="line">结果渲染为：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;static active&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式：</span><br><span class="line"></span><br><span class="line">&lt;div v-bind:class=&quot;classObject&quot;&gt;&lt;/div&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">  isActive: true,</span><br><span class="line">  error: null</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">  classObject: function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      active: this.isActive &amp;&amp; !this.error,</span><br><span class="line">      &apos;text-danger&apos;: this.error &amp;&amp; this.error.type === &apos;fatal&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">直接绑定到一个样式对象通常更好，这会让模板更清晰：</span><br><span class="line"></span><br><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">  styleObject: &#123;</span><br><span class="line">    color: &apos;red&apos;,</span><br><span class="line">    fontSize: &apos;13px&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">同样的，对象语法常常结合返回对象的计算属性使用。</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-杂谈" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/10/杂谈/">杂谈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/09/10/杂谈/" class="article-date">
+  <time datetime="2018-09-10T09:11:29.000Z" itemprop="datePublished">2018-09-10</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开学一周了，国创的事情已经告一段落，以一个学生的身份来说，我的任务首先是把课程过了。这个学期有机器学习、Web开发、信息安全、图形学、UML、需求分析、大数据、多媒体、DirectX这十门课，每天两节课，周末空闲。如何安排这空闲的大半时间？</p>
+<p>如我前两年一般，把大部分时间用到课业学习已经不现实。即使我在这些课花很多时间也不一定就能学好——我并不都感兴趣，何况不能指望30个小时胡吹和稀稀零零的作业就能学好十门课。我必须有所选择，对于机器学习和Web开发我比较感兴趣，就应当多下功夫，至于其他课程，按部就班通过就好。</p>
+<p>除了上课，还想做点实际的，这是我真正的兴趣所在。</p>
+<ol>
+<li>升级一下Cqueue，加一些类似分享和笔记的功能；</li>
+<li>升级一下Note，加一个云同步、指纹解锁；</li>
+<li>做一个手机端的Shell，用来做自己的桌面，类似Aris Launcher那样，最好还能支持一些脚本</li>
+</ol>
+<p>这些小玩意儿上不得台面，满足自己而已，但我乐意去做。</p>
+<p>昨天读了一篇爱默生的《随想录》，平实的语言如此细腻又深入人心，对我很大安慰。昨晚睡得早，今天非常精神，正想改一改Cqueue，想到了解一下Mongoose，逛到@atian25的博客，又逛到Coolshell.cn，非常佩服膜拜，把博客在手机上用RSS订阅了，留着以后翻看。</p>
+<p>第一次写博客，跟写日记很不一样，要发出来就是为了分享一些想法或者经受指点，总要受点束缚，太个人的话和发牢骚的话就删删改改，写了半个多小时。文笔还要练呀。希望以后多分享一些技术的想法，希望学期结束不会对自己失望吧。</p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+  
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/AndreamApp" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+		<li><a href="#" onclick="var blur = document.getElementById('bg').style.filter; document.getElementById('bg').style.filter = (blur==='blur(0px)') ? 'blur(10px)' : 'blur(0px)'"><i class="icon" ></i></a></li>
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+
+      </div>
+      <footer id="footer">
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+	<div id="footer-info" class="inner">
+      <div>
+	    &copy; 2018 Andream & setup(<a href="http://hexo.io/" target="_blank">Hexo</a>,
+	    <a href="https://github.com/hejianxian/hexo-theme-jane/" target="_blank">Jane</a>), page_visit = <span id="busuanzi_value_page_pv"></span>;
+	  </div>
+	</div>
+</footer>
+
+    </div>
+  </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/AndreamApp" class="mobile-nav-link">Github</a>
+  
+  <a href="#" onclick="var blur = document.getElementById('bg').style.filter; document.getElementById('bg').style.filter = (blur==='blur(0px)') ? 'blur(10px)' : 'blur(0px)'" class="mobile-nav-link">Blur</a>
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>

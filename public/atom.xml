@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Andream</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://andreamapp.com/"/>
+  <updated>2018-09-20T16:39:01.264Z</updated>
+  <id>http://andreamapp.com/</id>
+  
+  <author>
+    <name>Andream</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codeforces 1051</title>
+    <link href="http://andreamapp.com/2018/09/21/Codeforces%201051/"/>
+    <id>http://andreamapp.com/2018/09/21/Codeforces 1051/</id>
+    <published>2018-09-20T16:35:24.000Z</published>
+    <updated>2018-09-20T16:39:01.264Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《UML精粹》读书笔记</title>
+    <link href="http://andreamapp.com/2018/09/14/%E3%80%8AUML%E7%B2%BE%E7%B2%B9%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://andreamapp.com/2018/09/14/《UML精粹》读书笔记/</id>
+    <published>2018-09-13T16:00:00.000Z</published>
+    <updated>2018-09-19T15:41:07.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue入门</title>
+    <link href="http://andreamapp.com/2018/09/13/Vue%E5%85%A5%E9%97%A8/"/>
+    <id>http://andreamapp.com/2018/09/13/Vue入门/</id>
+    <published>2018-09-12T16:00:00.000Z</published>
+    <updated>2018-09-19T11:45:10.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://andreamapp.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue基础</title>
+    <link href="http://andreamapp.com/2018/09/13/Vue%E5%9F%BA%E7%A1%80/"/>
+    <id>http://andreamapp.com/2018/09/13/Vue基础/</id>
+    <published>2018-09-12T16:00:00.000Z</published>
+    <updated>2018-09-19T10:14:21.273Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>杂谈</title>
+    <link href="http://andreamapp.com/2018/09/10/%E6%9D%82%E8%B0%88/"/>
+    <id>http://andreamapp.com/2018/09/10/杂谈/</id>
+    <published>2018-09-10T09:11:29.000Z</published>
+    <updated>2018-09-19T15:40:40.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="瞎扯" scheme="http://andreamapp.com/tags/%E7%9E%8E%E6%89%AF/"/>
+    
+  </entry>
+  
+</feed>

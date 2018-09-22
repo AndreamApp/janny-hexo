@@ -26,12 +26,8 @@ Powered by hexo, Themed by jane, Controled by telcmd.
 ## Installation
 
 ```
-git clone janny-hexo
+git clone https://github.com/YourName/janny-hexo.git
 cd janny-hexo
-npm install
-
-git clone telcmd
-cd telcmd
 npm install
 ```
 
@@ -44,7 +40,7 @@ Server side:
 forever start telcmd/server.js
 ```
 
-PC side:
+PC side [optional]:
 
 ```
 // Start telcmd
@@ -57,7 +53,7 @@ forever start telcmd/client.js
  
      1. run command `new.bat` create a post
 	 
-	 2. run command `hx.bat` to review
+	 2. run command `hx.bat` to review [optional]
 	 
 	 3. run command `sync.bat` to sync to server 
 	 
